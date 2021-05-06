@@ -5,23 +5,8 @@ import TextButton from './TextButton';
 import './MovieItem.scss';
 
 export default function MovieItem(props) {
-  // return (
-  //    <div className="movie-list">
-  //     <Card>
-  //   <Image src={props.poster} size="tiny" wrapped ui={false} />
-  //   <Card.Content>
-  //     <Card.Header>{props.title}</Card.Header>
-  //     <Card.Meta>{props.year}</Card.Meta>
-  //   </Card.Content>
-  //   <Card.Content extra>
-  //     <TextButton>Nominate</TextButton>
-  //   </Card.Content>
-  //   </Card>
-  //    </div>
-  // )
 
-  return (
-  
+  return (  
     <Card>
       <Card.Content>
         <Image
@@ -31,10 +16,9 @@ export default function MovieItem(props) {
         />
         <Card.Header>{props.title}</Card.Header>
         <Card.Meta>{props.year}</Card.Meta>
-
       </Card.Content>
       <Card.Content extra>
-        <TextButton floated="right">Nominate</TextButton>
+        <TextButton floated="right" onClick={props.onClick}>Nominate</TextButton>
       </Card.Content>
     </Card>
   )

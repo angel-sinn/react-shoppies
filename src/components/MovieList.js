@@ -10,16 +10,9 @@ export default function MovieList(props) {
           title={movie.Title}
           year={movie.Year}
           poster={movie.Poster}
+          onClick={() => props.handleNominateClick(movie)}
       />
     )
   })
   return <ul>{movies}</ul>
-  
-    // <div>
-    //   {props.movies.map((movie, index) => (
-    //     <div>
-    //       <img src={movie.Poster} alt="movie"/>
-    //     </div>
-    //   ))}
-    // </div>
 }
