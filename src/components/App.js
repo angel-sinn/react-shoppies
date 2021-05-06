@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import MovieList from './MovieList';
-import Searchbar from './SearchBar'
+import Searchbar from './SearchBar';
+
 
 export default function App() {
 
@@ -28,6 +29,22 @@ export default function App() {
             "Poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"
         },
   ]);
+
+  const API_KEY = `${process.env.REACT_APP_API_KEY}`
+
+  const searchMovies = async () => {
+    const url = 'http://www.omdbapi.com/?s=avengers&apikey=' + API_KEY;
+
+    const results = await fetch(url);
+
+    const resultsJSON = await results.json();
+
+    console.log(resultsJSON);
+  }
+
+  useEffect(() => {
+    searchMovies();
+  }, []);
 
   return (
     <div>
