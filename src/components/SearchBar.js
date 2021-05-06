@@ -1,19 +1,18 @@
 import React from 'react'
+import { Segment, Form, Input } from 'semantic-ui-react'
 
 export default function SearchBar() {
 
   return (
-    <div className="search-bar ui segment">
-      <form className="ui form">
-        <div className="field">
-          <label>Movie Search</label>
-          <div class="ui icon input">
-            <input type="text"/>
-            <i class="search icon"></i>
+    <Segment>
+      <Form>
+        <Form.Field>
+          <div>
+            <label>Movie title</label>
+            <Input icon='search' type="text" />
           </div>
-        </div>
-      </form>
-    </div>
-
+        </Form.Field>
+      </Form>
+    </Segment>
   )
 }
