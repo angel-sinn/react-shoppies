@@ -6,9 +6,10 @@ import './MovieItem.scss';
 
 export default function MovieItem(props) {
 
-  return (  
-    <Card>
-      <Card.Content>
+  return (
+    <div className="movie-card">
+      <Card>
+      <Card.Content className="movie-content">
         <Image
           floated='left'
           size='tiny'
@@ -17,10 +18,10 @@ export default function MovieItem(props) {
         <Card.Header>{props.title}</Card.Header>
         <Card.Meta>{props.year}</Card.Meta>
       </Card.Content>
-      <Card.Content extra>
-        <TextButton floated="right" onClick={props.onClick}>Nominate</TextButton>
-      </Card.Content>
+        <TextButton floated="right" onClick={props.onClick}>{props.button}</TextButton>
     </Card>
+    </div>
+    
   )
 }
 

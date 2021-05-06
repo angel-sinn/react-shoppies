@@ -32,13 +32,18 @@ export default function App() {
     setNominated(nominateList);
   }
 
+  const removeNominate = (movie) => {
+    const nominateList = nominated.filter((item) => item.imdbID !== movie.imdbID);
+    setNominated(nominateList);
+  }
+
   return (
     <div>
       <h1>The Shoppies</h1>
       <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <div className="movie-lists">
-        <MovieList movies={movies} handleNominateClick={addNominate} />
-        <MovieList movies={nominated}/>
+        <MovieList movies={movies} handleNominateClick={addNominate} button="Nominate"/>
+        <MovieList movies={nominated} handleNominateClick={removeNominate} button="Remove"/>
       </div>
     </div>
   )

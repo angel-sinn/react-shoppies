@@ -10,7 +10,8 @@ export default function MovieList(props) {
           title={movie.Title}
           year={movie.Year}
           poster={movie.Poster}
-          onClick={() => props.handleNominateClick(movie)}
+        onClick={() => props.handleNominateClick(movie)}
+        button={props.button}
       />
     )
   })
