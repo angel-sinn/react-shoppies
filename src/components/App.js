@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import MovieList from './MovieList';
 import Searchbar from './SearchBar';
+import Banner from './Banner';
 
 import './App.scss';
 
@@ -9,7 +10,7 @@ export default function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [nominated, setNominated] = useState([]);
-
+    
   useEffect(() => {
     searchMovies(searchTerm);
   }, [searchTerm]);
@@ -54,6 +55,7 @@ export default function App() {
     <div>
       <h1>The Shoppies</h1>
       <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <Banner hidden={nominated.length < 5 ? true : false}/>
       <div className="movie-lists">
         <MovieList movies={movies} handleNominateClick={addNominate} button="Nominate"/>
         <MovieList movies={nominated} handleNominateClick={removeNominate} button="Remove"/>
