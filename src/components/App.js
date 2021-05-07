@@ -12,10 +12,23 @@ export default function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [nominated, setNominated] = useState([]);
-    
+  const [debouncedTerm, setDebouncedTerm] = useState(searchTerm)
+  
+  // set up debounce to reduce number of network requests
   useEffect(() => {
-    searchMovies(searchTerm);
-  }, [searchTerm]);
+    const timerId = setTimeout(() => {
+      setDebouncedTerm(searchTerm);
+    }, 500);
+
+    // cleanup function
+    return () => {
+      clearTimeout(timerId);
+    }
+  })
+
+  useEffect(() => {
+    searchMovies(debouncedTerm);
+  }, [debouncedTerm]);
 
   // load saved nominated movies from local storage
   useEffect(() => {
@@ -31,8 +44,8 @@ export default function App() {
 
   const API_KEY = `${process.env.REACT_APP_API_KEY}`
 
-  const searchMovies = async (searchTerm) => {
-    const url = `http://www.omdbapi.com/?s=${searchTerm}&apikey=${API_KEY}`;
+  const searchMovies = async (debouncedTerm) => {
+    const url = `http://www.omdbapi.com/?s=${debouncedTerm}&apikey=${API_KEY}`;
 
     const results = await fetch(url);
     const resultsData = await results.json();
@@ -56,6 +69,8 @@ export default function App() {
       setNominated(nominateList);
       updateDisableButton(movie, true);
       saveData(nominateList);
+    } else {
+      document.querySelector('.nominate-list').scrollIntoView();
     }
   }
 
