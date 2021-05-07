@@ -5,6 +5,7 @@ import NominationList from './NominationList';
 import Searchbar from './SearchBar';
 import Banner from './Banner';
 import Header from './Header';
+import LandingContainer from './LandingContainer';
 
 import './App.scss';
 
@@ -92,9 +93,13 @@ export default function App() {
     setMovies(movies);
   }
 
+  const clickToNominateSection = () => {
+    document.querySelector('input').focus();
+  }
+
   return (
-    <div>
-      <h1>Shoppies</h1>
+    <div className="app-body">
+      <LandingContainer handleLandingButtonClick={clickToNominateSection}/>
       <div className="nominate-list">
         <Header title="Nominated Movies" />
         <div className="banner-notification">
@@ -104,7 +109,7 @@ export default function App() {
       </div>
       <div className="search-list-container">
         <Header title="Search Movies to Nominate" />
-      <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <div search-results-list>
         <MovieSearchList movies={movies} handleNominateClick={addNominate} buttonName="Nominate"/>
         </div>
