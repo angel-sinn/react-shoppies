@@ -5,23 +5,23 @@ import { action } from "@storybook/addon-actions";
 import '../index.scss';
 
 // Components
-import TextButton from "../components/TextButton";
+import Button from "../components/AnimatedButton";
 
 export default {
-  title: "TextButton",
-  component: TextButton,
+  title: "Button",
+  component: Button,
 };
 
 export const Clickable = () => (
-  <TextButton secondary
+  <Button secondary
     onClick={action("Button clicked")}
   >
     Clickable
-  </TextButton>
+  </Button>
 );
 
 export const Disabled = () => (
-  <TextButton disabled>
+  <Button disabled>
     Disabled
-  </TextButton>
+  </Button>
 );

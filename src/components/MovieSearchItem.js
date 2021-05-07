@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
-import TextButton from './TextButton';
+import AnimatedButton from './AnimatedButton';
 
 import './MovieSearchItem.scss';
 
@@ -15,7 +15,7 @@ export default function MovieSearchItem(props) {
           <Card.Header className="movie-search-item-header">{props.title}</Card.Header>
           <Card.Meta>{props.year}</Card.Meta>
         </Card.Content>
-          <TextButton floated="right" onClick={props.onClick} disabled={props.disabled}>{props.buttonName}</TextButton>
+          <AnimatedButton floated="right" onClick={props.onClick} disabled={props.disabled}>{props.buttonName}</AnimatedButton>
       </Card>
     </div>
   )
