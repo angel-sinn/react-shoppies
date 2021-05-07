@@ -7,18 +7,17 @@ import './NominationItem.scss';
 export default function NominationItem(props) {
 
   return (
-    <div className="nomination-item-card">
+    <div className='nomination-item-card'>
       <Card>
-      <Card.Content className="nomination-item-content">
+      <Card.Content className='nomination-item-content'>
         <Image
           className='nomination-image'
           floated='left'
           src={props.poster}
         />
-        <Card.Header className="nomination-item-header">{props.title}</Card.Header>
-          <Card.Meta>{props.year}</Card.Meta>
-      </Card.Content>
-        <AnimatedButton floated="right" onClick={props.onClick} disabled={props.disabled}>{props.buttonName}</AnimatedButton>
+          <h4 className='nomination-item-header'>{props.title}</h4>
+        </Card.Content>
+          <AnimatedButton floated='right' onClick={props.onClick} disabled={props.disabled}>{props.buttonName}</AnimatedButton>
     </Card>
     </div>
   )

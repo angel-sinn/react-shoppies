@@ -1,12 +1,3 @@
-// .movie-lists {
-//   margin: 20px;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-evenly;
-//   border-radius: 8px;
-//   min-height: 500px;
-// }
-
 .nominate-list {
   display: flex;
   flex-direction: column;
@@ -34,6 +25,13 @@
 
 ul {
   padding: 0;
+}
+
+ul.movie-list-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 12px;
 }
 
 .ui.card {

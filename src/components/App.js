@@ -80,14 +80,16 @@ export default function App() {
   return (
     <div>
       <h1>Shoppies</h1>
-      <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <div className="nominate-list">
-      <Header title="Nominated Movies"/>
+        <Header title="Nominated Movies" />
+        <div className="banner-notification">
+          <Banner hidden={nominated.length < 5 ? true : false}/>
+        </div>
       <NominationList movies={nominated} handleNominateClick={removeNominate} buttonName="Remove" />
       </div>
-      <Banner hidden={(nominated || []).length < 5 ? true : false}/>
       <div className="search-list-container">
-        <Header title="Search Results" />
+        <Header title="Search Movies to Nominate" />
+      <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <div search-results-list>
         <MovieSearchList movies={movies} handleNominateClick={addNominate} buttonName="Nominate"/>
         </div>

@@ -1,11 +1,19 @@
 .nomination-item-card {
-  margin: 20px;
+  width: 214px;
+  margin: 12px;
+}
+
+.nomination-item-content {
+  height: 76px;
 }
 
 .nomination-image {
-  height: 96px;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
 }
 
-.header.nomination-item-header {
+.nomination-item-header {
   margin: 0px;
+  font-size: 0.9rem;
 }
