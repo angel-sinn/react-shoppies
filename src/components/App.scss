@@ -1,4 +1,41 @@
-.movie-lists {
+// .movie-lists {
+//   margin: 20px;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-evenly;
+//   border-radius: 8px;
+//   min-height: 500px;
+// }
+
+.nominate-list {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  flex: 1;
+  border: 2px solid rgb(206, 206, 206);
+  border-radius: 8px;
+  margin: 20px;
+  min-height: 225px;
+}
+
+.search-list-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 2px solid rgb(206, 206, 206);
+  border-radius: 8px;
+  margin: 20px;
+  min-height: auto;
+}
+
+.search-results-list {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  padding: 0;
+}
+
+.ui.card {
+  width: 450px;
 }

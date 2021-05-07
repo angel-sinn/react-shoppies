@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-import MovieList from './MovieList';
+import MovieSearchList from './MovieSearchList';
+import NominationList from './NominationList';
 import Searchbar from './SearchBar';
 import Banner from './Banner';
+import Header from './Header';
 
 import './App.scss';
 
@@ -33,14 +35,15 @@ export default function App() {
     const url = `http://www.omdbapi.com/?s=${searchTerm}&apikey=${API_KEY}`;
 
     const results = await fetch(url);
-    const resultsJSON = await results.json();
+    const resultsData = await results.json();
 
-    if (resultsJSON.Search) {
-      const movies = (resultsJSON.Search).map(m => {
+    if (resultsData.Search) {
+      // add disabled property to movie objects
+      const movies = (resultsData.Search).map(movie => {
         return {
-          ...m, 
+          ...movie, 
           // !! is to convert object into boolean
-          disabled: !!nominated.find(n => m.imdbID === n.imdbID)
+          disabled: !!nominated.find((item) => item.imdbID === movie.imdbID)
         };
       });
       setMovies(movies)
@@ -51,7 +54,7 @@ export default function App() {
     if (nominated.length < 5) {
       const nominateList = [...nominated, movie];
       setNominated(nominateList);
-      fn(movie, false);
+      updateDisableButton(movie, true);
       saveData(nominateList);
     }
   }
@@ -59,15 +62,16 @@ export default function App() {
   const removeNominate = (movie) => {
     const nominateList = nominated.filter((item) => item.imdbID !== movie.imdbID);
     setNominated(nominateList);
-    fn(movie, false);
+    updateDisableButton(movie, false);
     saveData(nominateList);
   }
 
-  const fn = (movie, disable) => {
-    const toUpdateIndex = movies.findIndex(m => m.imdbID === movie.imdbID);
-    const toUpdate = movies[toUpdateIndex];
-    movies[toUpdateIndex] = {
-      ...toUpdate,
+  // helper function to update disabled state of nominate button
+  const updateDisableButton = (movie, disable) => {
+    const movieIndex = movies.findIndex(item => item.imdbID === movie.imdbID);
+    const movieToUpdate = movies[movieIndex];
+    movies[movieIndex] = {
+      ...movieToUpdate,
       "disabled": disable
     };
     setMovies(movies);
@@ -77,15 +81,15 @@ export default function App() {
     <div>
       <h1>Shoppies</h1>
       <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <div className="nominate-list">
+      <Header title="Nominated Movies"/>
+      <NominationList movies={nominated} handleNominateClick={removeNominate} buttonName="Remove" />
+      </div>
       <Banner hidden={(nominated || []).length < 5 ? true : false}/>
-      <div className="movie-lists">
-        <div className="search-list">
-          <h2>Search Results</h2>
-          <MovieList movies={movies} handleNominateClick={addNominate} buttonName="Nominate"/>
-        </div>
-        <div className="nominate-list">
-          <h2>Nominated Movies</h2>
-          <MovieList movies={nominated} handleNominateClick={removeNominate} buttonName="Remove"/>
+      <div className="search-list-container">
+        <Header title="Search Results" />
+        <div search-results-list>
+        <MovieSearchList movies={movies} handleNominateClick={addNominate} buttonName="Nominate"/>
         </div>
       </div>
     </div>
