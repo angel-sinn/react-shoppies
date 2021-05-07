@@ -14,6 +14,17 @@ export default function App() {
     searchMovies(searchTerm);
   }, [searchTerm]);
 
+  // load saved nominated movies from local storage
+  useEffect(() => {
+    const savedMovies = JSON.parse(localStorage.getItem('shoppies-app'));
+
+    setNominated(savedMovies);
+  }, [])
+
+  const saveData = (data) => {
+    localStorage.setItem('shoppies-app', JSON.stringify(data));
+  }
+
   const API_KEY = `${process.env.REACT_APP_API_KEY}`
 
   const searchMovies = async (searchTerm) => {
@@ -30,11 +41,13 @@ export default function App() {
   const addNominate = (movie) => {
     const nominateList = [...nominated, movie];
     setNominated(nominateList);
+    saveData(nominateList);
   }
 
   const removeNominate = (movie) => {
     const nominateList = nominated.filter((item) => item.imdbID !== movie.imdbID);
     setNominated(nominateList);
+    saveData(nominateList);
   }
 
   return (
