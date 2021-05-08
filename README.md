@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Shoppies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Shoppies is a web application that allows users to search for and nominate up to 5 movies.
 
-## Available Scripts
+View live application: <a href="https://shoppies-as.herokuapp.com/" target="_blank">Shoppies</a>
 
-In the project directory, you can run:
+## Project Stack
 
-### `npm start`
+**Front-End**: HTML, SASS, JavaScript, React, Semantic UI  
+**Back-End**: Express, Nodejs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Users can search for movies and have the results displayed in real time
+- Users can add a movie from the search results to the nomination list
+- Users can view the list of movies already nominated and can remove a nominee from the nominated list
+- Nomination list is saved to user's local storage
+- Animated buttons for nominate and remove buttons
+- Debounce on search functionality to improve app performance
+- Users can click on 'Start Nominating' button and it will automatically focus on search bar input field
 
-### `npm test`
+## Final Product
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Homepage**
 
-### `npm run build`
+![Homepage gif](https://github.com/angel-sinn/react-shoppies/blob/master/docs/homepage.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Nominations**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Nominations screenshot](https://github.com/angel-sinn/react-shoppies/blob/master/docs/max-nominations.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Nominations Complete**
 
-### `npm run eject`
+![Nominations Complete](https://github.com/angel-sinn/react-shoppies/blob/master/docs/modal.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project requires the OMDB API key to use, please see: <http://www.omdbapi.com/apikey.aspx>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Fork this repository, and clone your fork of the repository
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Install the dependencies with `npm install`
 
-## Learn More
+3. Create the `.env` file by using `.env.example` as a reference: `cp .env.example .env`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Once the dependencies are installed, run `npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. In your browser, go to `localhost:3000`
 
-### Code Splitting
+6. Start nominating!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Dependencies
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Classnames
+- Dotenv
+- Node-sass
+- React
+- React-dom
+- React-scripts
+- Semantic-ui-css
+- Semantic-ui-react
+- Web-vitals
