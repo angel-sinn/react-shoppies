@@ -1,7 +1,8 @@
-import React from 'react';
-import { Form, Input } from 'semantic-ui-react';
+import React from "react";
 
-import './SearchBar.scss';
+import { Form, Input } from "semantic-ui-react";
+
+import "./SearchBar.scss";
 
 export default function SearchBar(props) {
   const handleOnChange = (e) => {

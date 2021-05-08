@@ -1,5 +1,6 @@
-import React from 'react';
-import { Button, Modal } from 'semantic-ui-react';
+import React from "react";
+
+import { Button, Modal } from "semantic-ui-react";
 
 export default function ModalPopup(props) {
   return (
@@ -7,7 +8,7 @@ export default function ModalPopup(props) {
       trigger={<Button color={props.buttonColor}>{props.buttonText}</Button>}
       header={props.header}
       content={props.content}
-      actions={[{ key: 'done', content: 'Done', positive: true }]}
+      actions={[{ key: "done", content: "Done", positive: true }]}
     />
   );
 }

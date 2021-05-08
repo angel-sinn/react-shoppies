@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import NominationItem from '../NominationItem/NominationItem';
+import NominationItem from "../NominationItem/NominationItem";
 
 export default function NominationList(props) {
   const movies = (props.movies || []).map((movie) => {

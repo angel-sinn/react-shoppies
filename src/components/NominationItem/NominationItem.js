@@ -1,8 +1,10 @@
-import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
-import AnimatedButton from '../AnimatedButton/AnimatedButton';
+import React from "react";
 
-import './NominationItem.scss';
+import { Card, Image } from "semantic-ui-react";
+
+import AnimatedButton from "../AnimatedButton/AnimatedButton";
+
+import "./NominationItem.scss";
 
 export default function NominationItem(props) {
   return (

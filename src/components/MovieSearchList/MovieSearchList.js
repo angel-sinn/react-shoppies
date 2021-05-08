@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import MovieSearchItem from '../MovieSearchItem/MovieSearchItem';
+import MovieSearchItem from "../MovieSearchItem/MovieSearchItem";
 
 export default function MovieSearchList(props) {
   const movies = (props.movies || []).map((movie) => {

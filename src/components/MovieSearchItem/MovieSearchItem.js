@@ -1,8 +1,10 @@
-import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
-import AnimatedButton from '../AnimatedButton/AnimatedButton';
+import React from "react";
 
-import './MovieSearchItem.scss';
+import { Card, Image } from "semantic-ui-react";
+
+import AnimatedButton from "../AnimatedButton/AnimatedButton";
+
+import "./MovieSearchItem.scss";
 
 export default function MovieSearchItem(props) {
   return (

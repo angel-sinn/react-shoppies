@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Icon } from 'semantic-ui-react';
+import { Icon } from "semantic-ui-react";
 
-import TextButton from '../TextButton/TextButton';
+import TextButton from "../TextButton/TextButton";
 
-import './LandingContainer.scss';
+import "./LandingContainer.scss";
 
 export default function LandingContainer(props) {
   return (

@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import { Button } from 'semantic-ui-react';
+import { Button } from "semantic-ui-react";
 
-import MovieSearchList from './MovieSearchList/MovieSearchList';
-import NominationList from './NominationList/NominationList';
-import Searchbar from './SearchBar/SearchBar';
-import Banner from './Banner/Banner';
-import Header from './Header/Header';
-import LandingContainer from './LandingContainer/LandingContainer';
-import ModalPopup from './Modal/Modal';
+import Banner from "./Banner/Banner";
+import Header from "./Header/Header";
+import LandingContainer from "./LandingContainer/LandingContainer";
+import ModalPopup from "./Modal/Modal";
+import MovieSearchList from "./MovieSearchList/MovieSearchList";
+import NominationList from "./NominationList/NominationList";
+import Searchbar from "./SearchBar/SearchBar";
 
-import './App.scss';
+import "./App.scss";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [nominated, setNominated] = useState([]);
   const [debouncedTerm, setDebouncedTerm] = useState(searchTerm);
 
@@ -36,7 +36,7 @@ export default function App() {
 
   // load saved nominated movies from local storage
   useEffect(() => {
-    const savedMovies = JSON.parse(localStorage.getItem('shoppies-app'));
+    const savedMovies = JSON.parse(localStorage.getItem("shoppies-app"));
     if (savedMovies) {
       setNominated(savedMovies);
     }
@@ -44,7 +44,7 @@ export default function App() {
 
   // store saved nominated movies to local storage
   const saveData = (data) => {
-    localStorage.setItem('shoppies-app', JSON.stringify(data));
+    localStorage.setItem("shoppies-app", JSON.stringify(data));
   };
 
   const API_KEY = `${process.env.REACT_APP_API_KEY}`;
@@ -75,7 +75,7 @@ export default function App() {
       updateDisableButton(movie, true);
       saveData(nominateList);
     } else {
-      document.querySelector('.nominate-list').scrollIntoView();
+      document.querySelector(".nominate-list").scrollIntoView();
     }
   };
 
@@ -100,7 +100,7 @@ export default function App() {
   };
 
   const clickToNominateSection = () => {
-    document.querySelector('input').focus();
+    document.querySelector("input").focus();
   };
 
   return (
@@ -114,7 +114,7 @@ export default function App() {
             size="large"
             hidden={nominated.length < 5 ? true : false}
           >
-            You have reached the maximum number of 5 nominations.{' '}
+            You have reached the maximum number of 5 nominations.
             <ModalPopup
               trigger={<Button />}
               buttonText="Submit"
