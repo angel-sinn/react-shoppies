@@ -24,7 +24,7 @@ export default function App() {
       setDebouncedTerm(searchTerm);
     }, 500);
 
-    // cleanup function
+    // cleanup
     return () => {
       clearTimeout(timerId);
     };
