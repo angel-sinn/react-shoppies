@@ -127,7 +127,7 @@ export default function App() {
             size="large"
             hidden={nominated.length < 1 ? false : true}
           >
-            No nominated movies yet. Search movies below to nominate.
+            No nominated movies yet. Search movies below.
           </Banner>
         </div>
         <NominationList
