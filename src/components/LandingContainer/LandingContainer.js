@@ -16,7 +16,7 @@ export default function LandingContainer(props) {
           <span> </span>
           Shoppies Nominations
         </h1>
-        <p>Nominate up to 5 movies!</p>
+        <p>Choose 5 movies to nominate!</p>
         <div className="landing-button">
           <TextButton onClick={props.handleLandingButtonClick}>
             Start Nominating

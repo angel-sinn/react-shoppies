@@ -20,7 +20,7 @@
 
     p {
       font-size: 1.75rem;
-      animation: type 4s steps(24);
+      animation: type 4s steps(28);
       animation-iteration-count: infinite;
       overflow: hidden;
       white-space: nowrap;
@@ -36,11 +36,11 @@
       }
 
       60% {
-        width: 24ch;
+        width: 28ch;
       }
 
       100% {
-        width: 24ch;
+        width: 28ch;
       }
     }
 
