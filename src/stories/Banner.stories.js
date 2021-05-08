@@ -2,13 +2,11 @@
 import '../index.scss';
 
 // Component
-import Banner from "../components/Banner";
+import Banner from '../components/Banner/Banner';
 
 export default {
-  title: "Banner",
+  title: 'Banner',
   component: Banner,
 };
 
-export const banner = () => (
-  <Banner/>
-);
+export const banner = () => <Banner />;

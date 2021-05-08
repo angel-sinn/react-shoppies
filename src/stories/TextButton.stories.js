@@ -1,21 +1,19 @@
 // Libraries
-import { action } from "@storybook/addon-actions";
+import { action } from '@storybook/addon-actions';
 
 // Stylesheet
 import '../index.scss';
 
 // Components
-import TextButton from "../components/TextButton";
+import TextButton from '../components/TextButton/TextButton';
 
 export default {
-  title: "TextButton",
+  title: 'TextButton',
   component: TextButton,
 };
 
 export const Clickable = () => (
-  <TextButton secondary
-    onClick={action("Button clicked")}
-  >
+  <TextButton secondary onClick={action('Button clicked')}>
     Clickable
   </TextButton>
 );

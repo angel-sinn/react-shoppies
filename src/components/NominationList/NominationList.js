@@ -1,11 +1,8 @@
 import React from 'react';
 
-import NominationItem from './NominationItem';
-
-import './NominationList.scss';
+import NominationItem from '../NominationItem/NominationItem';
 
 export default function NominationList(props) {
-  
   const movies = (props.movies || []).map((movie) => {
     return (
       <NominationItem
@@ -17,7 +14,7 @@ export default function NominationList(props) {
         buttonName={props.buttonName}
         disabled={movie.disabled}
       />
-    )
-  })
-  return <ul className="movie-list-ul">{movies}</ul>
+    );
+  });
+  return <ul className="movie-list-ul">{movies}</ul>;
 }

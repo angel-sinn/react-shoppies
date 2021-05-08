@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-import { Button, Modal } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 
-import MovieSearchList from './MovieSearchList';
-import NominationList from './NominationList';
-import Searchbar from './SearchBar';
-import Banner from './Banner';
-import Header from './Header';
-import LandingContainer from './LandingContainer';
-import ModalPopup from './Modal';
+import MovieSearchList from './MovieSearchList/MovieSearchList';
+import NominationList from './NominationList/NominationList';
+import Searchbar from './SearchBar/SearchBar';
+import Banner from './Banner/Banner';
+import Header from './Header/Header';
+import LandingContainer from './LandingContainer/LandingContainer';
+import ModalPopup from './Modal/Modal';
 
 import './App.scss';
 
@@ -42,6 +42,7 @@ export default function App() {
     }
   }, []);
 
+  // store saved nominated movies to local storage
   const saveData = (data) => {
     localStorage.setItem('shoppies-app', JSON.stringify(data));
   };

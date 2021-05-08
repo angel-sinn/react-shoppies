@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Icon } from 'semantic-ui-react';
 
-import TextButton from './TextButton';
+import TextButton from '../TextButton/TextButton';
 
 import './LandingContainer.scss';
 
