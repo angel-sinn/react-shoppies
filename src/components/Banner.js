@@ -6,9 +6,14 @@ import './Banner.scss';
 export default function Banner(props) {
   return (
     <div className="banner">
-      <Message hidden={props.hidden} visible={props.visible}>
-        <p>You have reached the maximum number of 5 nominations.</p>
+      <Message
+        color={props.color}
+        size={props.size}
+        hidden={props.hidden}
+        visible={props.visible}
+      >
+        <p>{props.children}</p>
       </Message>
     </div>
-  )
+  );
 }

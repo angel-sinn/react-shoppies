@@ -1,16 +1,51 @@
 .landing-container {
   position: relative;
 
+  .landing-image {
+    width: 100%;
+    height: 100vh;
+    filter: brightness(65%);
+  }
+
   .landing-text-block {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-  }
-  
-  .landing-image {
-    width: 100%;
-    height: 100vh;
+
+    h1.landing-header {
+      font-size: 3.75rem;
+    }
+
+    p {
+      font-size: 1.75rem;
+      animation: type 4s steps(24);
+      animation-iteration-count: infinite;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    @keyframes type {
+      0% {
+        width: 0ch;
+      }
+
+      5% {
+        width: 0ch;
+      }
+
+      60% {
+        width: 24ch;
+      }
+
+      100% {
+        width: 24ch;
+      }
+    }
+
+    .button.ui.basic.inverted.button {
+      font-size: 1.2rem;
+    }
   }
 }
