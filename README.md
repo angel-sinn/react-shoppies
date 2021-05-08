@@ -11,13 +11,22 @@ View live application: <a href="https://shoppies-as.herokuapp.com/" target="_bla
 
 ## Project Features
 
-- Users can search for movies and have the results displayed in real time
-- Users can add a movie from the search results to the nomination list
-- Users can view the list of movies already nominated and can remove a nominee from the nominated list
-- Nomination list is saved to user's local storage
+**Required**
+
+- Search results should come from OMDB's API
+- Each search result should list at least its title, year of release and a button to nominate that film
+- Updates to the search terms should update the result list
+- Movies in search results can be added and removed from the nomination list
+- If a search result has already been nominated, disable its nominate button
+- Display a banner when the user has 5 nominations
+
+**Additional**
+
 - Animated buttons for nominate and remove buttons
+- Nomination list is saved to user's local storage
 - Debounce on search functionality to improve app performance
 - Users can click on 'Start Nominating' button and it will automatically focus on search bar input field
+- Submit button is displayed once user has 5 nominations and will lead to modal popup confirming submission success
 
 ## Final Product
 
