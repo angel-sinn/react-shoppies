@@ -50,7 +50,7 @@ export default function App() {
   const API_KEY = `${process.env.REACT_APP_API_KEY}`;
 
   const searchMovies = async (debouncedTerm) => {
-    const url = `http://www.omdbapi.com/?s=${debouncedTerm}&apikey=${API_KEY}`;
+    const url = `https://www.omdbapi.com/?s=${debouncedTerm}&apikey=${API_KEY}`;
 
     const results = await fetch(url);
     const resultsData = await results.json();
