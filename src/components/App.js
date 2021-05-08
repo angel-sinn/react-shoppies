@@ -47,6 +47,7 @@ export default function App() {
     localStorage.setItem("shoppies-app", JSON.stringify(data));
   };
 
+  // search movies
   const API_KEY = `${process.env.REACT_APP_API_KEY}`;
 
   const searchMovies = async (debouncedTerm) => {
@@ -68,6 +69,7 @@ export default function App() {
     }
   };
 
+  // nominate handlers
   const addNominate = (movie) => {
     if (nominated.length < 5) {
       const nominateList = [...nominated, movie];
@@ -88,7 +90,7 @@ export default function App() {
     saveData(nominateList);
   };
 
-  // helper function to update disabled state of nominate button
+  // update disabled state of nominate button
   const updateDisableButton = (movie, disable) => {
     const movieIndex = movies.findIndex((item) => item.imdbID === movie.imdbID);
     const movieToUpdate = movies[movieIndex];
@@ -99,6 +101,7 @@ export default function App() {
     setMovies(movies);
   };
 
+  // focus on searchbar upon click
   const clickToNominateSection = () => {
     document.querySelector("input").focus();
   };
