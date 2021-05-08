@@ -76,7 +76,9 @@ export default function App() {
       setNominated(nominateList);
       updateDisableButton(movie, true);
       saveData(nominateList);
-    } else {
+    }
+
+    if (nominated.length >= 4) {
       document.querySelector(".nominate-list").scrollIntoView();
     }
   };
