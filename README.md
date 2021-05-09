@@ -1,6 +1,6 @@
 # Shoppies
 
-Shoppies is a web application that allows users to search for and nominate up to 5 movies.
+Shoppies is a web application that allows users to search for and nominate movies.
 
 View live application: <a href="https://shoppies-as.herokuapp.com/" target="_blank">Shoppies</a>  
 (Note: may be a slight delay for the app to load)
@@ -8,13 +8,14 @@ View live application: <a href="https://shoppies-as.herokuapp.com/" target="_bla
 ## Project Stack
 
 **Front-End**: HTML, SASS, JavaScript, React, Semantic UI  
-**Back-End**: Express, Nodejs
+**Back-End**: Express, Nodejs  
+**API**: OMDb API
 
 ## Project Features
 
 **Required**
 
-- Search results should come from OMDB's API
+- Search results should come from OMDb's API
 - Each search result should list at least its title, year of release and a button to nominate that film
 - Updates to the search terms should update the result list
 - Movies in search results can be added and removed from the nomination list
@@ -45,7 +46,7 @@ View live application: <a href="https://shoppies-as.herokuapp.com/" target="_bla
 
 ## Getting Started
 
-This project requires the OMDB API key to use, please see: <http://www.omdbapi.com/apikey.aspx>
+This project requires the OMDb API key to use, please see: <http://www.omdbapi.com/apikey.aspx>
 
 1. Fork this repository, and clone your fork of the repository
 
