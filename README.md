@@ -1,6 +1,6 @@
 # Shoppies
 
-Shoppies is a web application that allows users to search for and nominate movies.
+Shoppies is a mobile-friendly web application that allows users to search for and nominate movies.
 
 View live application: <a href="https://shoppies-as.herokuapp.com/" target="_blank">Shoppies</a>  
 (Note: may be a slight delay for the app to load)
@@ -28,7 +28,8 @@ View live application: <a href="https://shoppies-as.herokuapp.com/" target="_bla
 - Nomination list is saved to user's local storage
 - Debounce on search functionality to improve app performance
 - Users can click on 'Start Nominating' button and it will automatically focus on search bar input field
-- Submit button is displayed once user has 5 nominations and will lead to modal popup confirming submission success
+- Submit button is displayed once user has 5 nominations
+- Modal popup confirming submission success
 
 ## Final Product
 
