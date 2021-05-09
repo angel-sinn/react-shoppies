@@ -8,7 +8,7 @@ View live application: <a href="https://shoppies-as.herokuapp.com/" target="_bla
 ## Project Stack
 
 **Front-End**: HTML, SASS, JavaScript, React, Semantic UI  
-**Back-End**: Express, Nodejs  
+**Back-End**: Nodejs  
 **API**: OMDb API
 
 ## Project Features
