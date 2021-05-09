@@ -2,7 +2,8 @@
 
 Shoppies is a web application that allows users to search for and nominate up to 5 movies.
 
-View live application: <a href="https://shoppies-as.herokuapp.com/" target="_blank">Shoppies</a>
+View live application: <a href="https://shoppies-as.herokuapp.com/" target="_blank">Shoppies</a>  
+(Note: may be a slight delay for the app to load)
 
 ## Project Stack
 
